@@ -1,102 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShopSwift – Launching Soon</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Inter", sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-      }
-      .container {
-        max-width: 600px;
-        animation: fadeIn 1.5s ease-in;
-      }
-      h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-      }
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        opacity: 0.9;
-      }
-      .contact {
-        font-size: 1.1rem;
-        margin-top: 2rem;
-      }
-      .social {
-        margin-top: 2rem;
-      }
-      .social a {
-        color: #fff;
-        margin: 0 10px;
-        font-size: 1.5rem;
-        text-decoration: none;
-        opacity: 0.8;
-      }
-      .social a:hover {
-        opacity: 1;
-      }
-      footer {
-        margin-top: 4rem;
-        font-size: 0.9rem;
-        opacity: 0.7;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-        p {
-          font-size: 1rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>ShopSwift</h1>
-      <p>We’re building something amazing. <br />Launch coming soon!</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeumaEdu – Launching Soon</title>
+  <meta name="description" content="NeumaEdu is an innovative edtech platform offering online courses and tutoring. Launching soon in Nigeria." />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --accent: #3b82f6;
+      --light: #f8fafc;
+      --dark: #1e293b;
+      --gray: #64748b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-      <div class="contact">
-        <p>Need to reach us? Email: <strong>hello@shopswift.ng</strong></p>
+    /* Header & Nav */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .nav-links a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,30 L100,100 L0,100 Z" fill="rgba(255,255,255,0.05)"/></svg>') bottom / 100% 100px no-repeat;
+    }
+    .hero-content {
+      max-width: 700px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero .tagline {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      font-weight: 500;
+    }
+    .hero .contact-btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hero .contact-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    /* About Section */
+    .about {
+      padding: 100px 5%;
+      background: #fff;
+      text-align: center;
+    }
+    .about .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .about h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    .about p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      margin-bottom: 1.2rem;
+    }
+    .about .highlight {
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      text-align: center;
+      padding: 3rem 5%;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+    footer a:hover { color: #fff; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      .hero .tagline { font-size: 1.1rem; }
+      .nav-links { display: none; } /* Simple mobile: hide links */
+      .about h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="#" class="logo">NeumaEdu</a>
+      <div class="nav-links">
+        <a href="#about" onclick="smoothScroll(event, 'about')">About</a>
+        <a href="mailto:support@neumaedu.com">Contact</a>
       </div>
+    </nav>
+  </header>
 
-      <div class="social">
-        <a href="https://instagram.com/shopswiftng" target="_blank">📸</a>
-        <a href="https://facebook.com/shopswiftng" target="_blank">📘</a>
-        <a href="https://twitter.com/shopswiftng" target="_blank">🐦</a>
-      </div>
-
-      <footer>&copy; 2025 ShopSwift. All rights reserved.</footer>
+  <!-- Hero / Coming Soon -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>NeumaEdu</h1>
+      <p class="tagline">Empowering the next generation through innovative, accessible education.<br><strong>Launching soon in Nigeria.</strong></p>
+      <a href="mailto:support@neumaedu.com" class="contact-btn">Get Early Access →</a>
     </div>
-  </body>
+  </section>
+
+  <!-- About Us (Integrated) -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About NeumaEdu</h2>
+      <p><span class="highlight">NeumaEdu</span> is a Nigerian edtech startup founded in 2025 with a mission to make quality education engaging, personalized, and available to every learner.</p>
+      <p>We’re building an online platform offering:</p>
+      <p>• Interactive video courses<br>• Live 1-on-1 tutoring<br>• Progress tracking & AI-powered learning paths</p>
+      <p>Currently in development. <strong>Pre-register now</strong> to be the first to know when we launch!</p>
+      <p><strong>Email:</strong> <a href="mailto:support@neumaedu.com">support@neumaedu.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NeumaEdu. All rights reserved. | Based in Nigeria</p>
+    <p>
+      <a href="https://instagram.com/neumaedu" target="_blank">Instagram</a> • 
+      <a href="https://twitter.com/neumaedu" target="_blank">Twitter</a> • 
+      <a href="https://linkedin.com/company/neumaedu" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    function smoothScroll(e, id) {
+      e.preventDefault();
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
 </html>
