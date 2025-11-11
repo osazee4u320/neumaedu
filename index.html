@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopSwift – Launching Soon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        animation: fadeIn 1.5s ease-in;
+      }
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+      .contact {
+        font-size: 1.1rem;
+        margin-top: 2rem;
+      }
+      .social {
+        margin-top: 2rem;
+      }
+      .social a {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+      .social a:hover {
+        opacity: 1;
+      }
+      footer {
+        margin-top: 4rem;
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ShopSwift</h1>
+      <p>We’re building something amazing. <br />Launch coming soon!</p>
+
+      <div class="contact">
+        <p>Need to reach us? Email: <strong>hello@shopswift.ng</strong></p>
+      </div>
+
+      <div class="social">
+        <a href="https://instagram.com/shopswiftng" target="_blank">📸</a>
+        <a href="https://facebook.com/shopswiftng" target="_blank">📘</a>
+        <a href="https://twitter.com/shopswiftng" target="_blank">🐦</a>
+      </div>
+
+      <footer>&copy; 2025 ShopSwift. All rights reserved.</footer>
+    </div>
+  </body>
+</html>
